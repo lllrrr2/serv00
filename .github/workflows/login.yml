@@ -31,8 +31,8 @@ jobs:
           sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER3 }}@s4.serv00.com "exit"
           
           sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER1 }}@s1.ct8.pl "exit"
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER4 }}@s1.ct8.pl "exit"
-          sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER5 }}@s1.ct8.pl "exit"
+          #sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER4 }}@s1.ct8.pl "exit"
+          #sshpass -p ${{ secrets.PASSWORD }} ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -tt ${{ secrets.USER5 }}@s1.ct8.pl "exit"
       
       - name: 登录面板
         run: |
@@ -79,7 +79,7 @@ jobs:
 
           login_and_check "${{ secrets.USER1 }}" "https://panel.ct8.pl" 
           #login_and_check "${{ secrets.USER4 }}" "https://panel.ct8.pl" 
-          login_and_check "${{ secrets.USER5 }}" "https://panel.ct8.pl" 
+          #login_and_check "${{ secrets.USER5 }}" "https://panel.ct8.pl" 
           
       -  name: 删除工作流
          uses: GitRML/delete-workflow-runs@main
